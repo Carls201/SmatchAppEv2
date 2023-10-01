@@ -126,5 +126,31 @@ namespace SmatchAppEv2.Controllers
             }          
             
         }
+
+        // BUSCAR
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUsuario(int id)
+        {
+            Resp r = new();
+            var user = await db.Usuarios.Select(a => new
+            {
+                id = a.IdUsuario,
+                nombre = a.Nombre,
+                fecha_nac = a.FechaNac,
+                altura = a.Altura,
+                peso = a.Peso,
+                sexo = a.Sexo,
+                correo = a.Correo
+            }).FirstOrDefaultAsync(x => x.id == id);
+
+            if (user == null)
+            {
+                r.Message = $"No se encuentra el lugar de id :{id}";
+                return NotFound(r);
+            }
+            r.Success = true;
+            r.Data = user;
+            return Ok(r);
+        }
     }
 }
