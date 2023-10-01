@@ -5,5 +5,5 @@
 ## Programacion Web 2
 
 ### Repositorios contribuyentes
-[Leandro Inzunza](https://github.com/CheoBlk/)
-[Carlos Uribe](https://github.com/Carls201)
+  - [Leandro Inzunza](https://github.com/CheoBlk/)
+  - [Carlos Uribe](https://github.com/Carls201)
