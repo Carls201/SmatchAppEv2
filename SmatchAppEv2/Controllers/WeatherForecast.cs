@@ -1,4 +1,4 @@
-namespace SmatchAppEv2
+namespace SmatchAppEv2.Controllers
 {
     public class WeatherForecast
     {
